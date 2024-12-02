@@ -42,9 +42,7 @@
             this.consultarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.darDeBajaAClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -153,25 +151,12 @@
             this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
             this.configuraciónToolStripMenuItem.Text = "Notificaciones";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Proyecto.Properties.Resources.CornIslandTv;
-            this.pictureBox1.Location = new System.Drawing.Point(763, 112);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(236, 235);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1697, 848);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -184,7 +169,6 @@
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,7 +189,6 @@
         private System.Windows.Forms.ToolStripMenuItem consultarClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem darDeBajaAClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizarOEliminarFacturasToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
