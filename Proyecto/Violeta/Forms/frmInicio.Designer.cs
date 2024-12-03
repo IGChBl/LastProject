@@ -46,7 +46,7 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(387, 166);
+            this.lblUsuario.Location = new System.Drawing.Point(453, 166);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(82, 20);
@@ -57,7 +57,7 @@
             // 
             this.lblContrasenia.AutoSize = true;
             this.lblContrasenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContrasenia.Location = new System.Drawing.Point(357, 222);
+            this.lblContrasenia.Location = new System.Drawing.Point(430, 222);
             this.lblContrasenia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContrasenia.Name = "lblContrasenia";
             this.lblContrasenia.Size = new System.Drawing.Size(110, 20);
@@ -67,21 +67,21 @@
             // tbUser
             // 
             this.tbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUser.Location = new System.Drawing.Point(475, 158);
+            this.tbUser.Location = new System.Drawing.Point(543, 152);
             this.tbUser.Margin = new System.Windows.Forms.Padding(4);
             this.tbUser.Multiline = true;
             this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(301, 34);
+            this.tbUser.Size = new System.Drawing.Size(265, 34);
             this.tbUser.TabIndex = 2;
             // 
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(475, 214);
+            this.tbPassword.Location = new System.Drawing.Point(543, 210);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.tbPassword.Multiline = true;
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(301, 32);
+            this.tbPassword.Size = new System.Drawing.Size(265, 32);
             this.tbPassword.TabIndex = 3;
             this.tbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPassword_KeyPress);
             // 
@@ -92,7 +92,7 @@
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnIngresar.Location = new System.Drawing.Point(361, 298);
+            this.btnIngresar.Location = new System.Drawing.Point(578, 284);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(161, 54);
@@ -108,7 +108,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancelar.Location = new System.Drawing.Point(616, 298);
+            this.btnCancelar.Location = new System.Drawing.Point(578, 379);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(161, 54);
@@ -121,7 +121,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(475, 101);
+            this.label1.Location = new System.Drawing.Point(516, 85);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(261, 29);
@@ -135,17 +135,15 @@
             this.pnlIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.pnlIzquierdo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlIzquierdo.Name = "pnlIzquierdo";
-            this.pnlIzquierdo.Size = new System.Drawing.Size(287, 469);
+            this.pnlIzquierdo.Size = new System.Drawing.Size(408, 469);
             this.pnlIzquierdo.TabIndex = 7;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-15, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(313, 469);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.Size = new System.Drawing.Size(405, 457);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 

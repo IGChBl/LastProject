@@ -141,5 +141,74 @@ namespace Proyecto
                 MessageBox.Show("Factura eliminada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            var facturaSeleccionada = dgvFacturas.CurrentRow?.DataBoundItem as Factura;
+
+            if (facturaSeleccionada == null)
+            {
+                MessageBox.Show("Seleccione una factura para ver los detalles.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Crear contenido del archivo .txt
+            StringBuilder detalles = new StringBuilder();
+            detalles.AppendLine($"Factura: {facturaSeleccionada.Numero}");
+            detalles.AppendLine($"Cliente: {facturaSeleccionada.Cliente}");
+            detalles.AppendLine($"Fecha: {facturaSeleccionada.Fecha:dd/MM/yyyy}");
+            detalles.AppendLine("\nServicios:");
+            foreach (var servicio in facturaSeleccionada.Servicios)
+            {
+                detalles.AppendLine($"- {servicio.Nombre}: ${servicio.Precio}");
+            }
+            detalles.AppendLine($"\nTotal: ${facturaSeleccionada.Total}");
+
+            // Guardar archivo
+            string rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"Factura_{facturaSeleccionada.Numero}.txt");
+            File.WriteAllText(rutaArchivo, detalles.ToString());
+
+            // Mostrar mensaje y abrir el archivo
+            MessageBox.Show($"Detalles guardados en: {rutaArchivo}", "Factura Detallada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            System.Diagnostics.Process.Start("notepad.exe", rutaArchivo);
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            var facturaSeleccionada = dgvFacturas.CurrentRow?.DataBoundItem as Factura;
+
+            if (facturaSeleccionada == null)
+            {
+                MessageBox.Show("Seleccione una factura para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Confirmar eliminación
+            var confirmResult = MessageBox.Show(
+                $"¿Está seguro de eliminar la factura {facturaSeleccionada.Numero}?",
+                "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                // Eliminar la factura del archivo JSON
+                FacturaStorage.EliminarFactura(facturaSeleccionada.Numero);
+
+                // Actualizar el DataGridView
+                dgvFacturas.DataSource = null;
+                dgvFacturas.DataSource = FacturaStorage.CargarFacturas();
+
+                MessageBox.Show("Factura eliminada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
-}
+   }

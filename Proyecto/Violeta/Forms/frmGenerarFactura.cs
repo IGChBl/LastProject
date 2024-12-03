@@ -177,6 +177,96 @@ namespace Proyecto
         private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            this.Close (); 
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            var clienteSeleccionado = cmbCliente.SelectedItem as Cliente;
+
+            // Verificar que se haya seleccionado un cliente válido
+            if (clienteSeleccionado == null || clienteSeleccionado.Nombre == "Seleccionar Cliente")
+            {
+                MessageBox.Show("Por favor, seleccione un cliente válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Recolectar los servicios seleccionados y calcular el total
+            decimal totalFactura = 0;
+            var serviciosSeleccionados = new List<Servicio>();
+
+            foreach (DataGridViewRow row in dgvServicios.Rows)
+            {
+                if (Convert.ToBoolean(row.Cells["Seleccionar"].Value) == true)
+                {
+                    var servicio = row.DataBoundItem as Servicio;
+                    if (servicio != null)
+                    {
+                        serviciosSeleccionados.Add(servicio);
+                        totalFactura += servicio.Precio;
+                    }
+                }
+            }
+
+            if (serviciosSeleccionados.Count == 0)
+            {
+                MessageBox.Show("Por favor, seleccione al menos un servicio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Crear la factura
+            Factura nuevaFactura = new Factura
+            {
+                Numero = "F" + DateTime.Now.Ticks,
+                Cliente = clienteSeleccionado.Nombre + " " + clienteSeleccionado.Apellido,
+                Fecha = DateTime.Now,
+                Servicios = serviciosSeleccionados,
+                Total = totalFactura
+            };
+
+            // Cargar las facturas existentes desde el archivo JSON
+            var facturas = FacturaStorage.CargarFacturas();
+
+            // Verificar si la factura ya existe antes de agregarla
+            if (!facturas.Any(f => f.Numero == nuevaFactura.Numero))
+            {
+                facturas.Add(nuevaFactura); // Agregar la nueva factura si no existe
+                FacturaStorage.GuardarFacturas(facturas); // Guardar todas las facturas en el archivo JSON
+            }
+
+            // Crear el contenido de la factura para archivo de texto
+            StringBuilder factura = new StringBuilder();
+            factura.AppendLine("FACTURA");
+            factura.AppendLine("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy"));
+            factura.AppendLine("Cliente: " + clienteSeleccionado.Nombre + " " + clienteSeleccionado.Apellido);
+            factura.AppendLine("Email: " + clienteSeleccionado.Email);
+            factura.AppendLine("Teléfono: " + clienteSeleccionado.Telefono);
+            factura.AppendLine("\nServicios:");
+            foreach (var servicio in serviciosSeleccionados)
+            {
+                factura.AppendLine($"- {servicio.Nombre}: ${servicio.Precio}");
+            }
+            factura.AppendLine("\nTotal: $" + totalFactura);
+
+            // Guardar la factura en un archivo de texto
+            string rutaFactura = @"C:\Facturas\Factura_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".txt";
+            System.IO.Directory.CreateDirectory(@"C:\Facturas"); // Crear el directorio si no existe
+            System.IO.File.WriteAllText(rutaFactura, factura.ToString());
+
+            // Mostrar mensaje de confirmación
+            MessageBox.Show("Factura generada correctamente.\nRuta: " + rutaFactura, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Abrir el archivo generado en el Bloc de notas
+            System.Diagnostics.Process.Start("notepad.exe", rutaFactura);
+        }
     }
 }
 
