@@ -280,7 +280,6 @@
             this.MinimizeBox = false;
             this.Name = "frmAgregarCliente";
             this.Text = "Agregar Cliente";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAgregarCliente_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

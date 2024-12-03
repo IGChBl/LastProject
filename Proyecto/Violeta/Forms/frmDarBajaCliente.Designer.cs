@@ -174,7 +174,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDarBajaCliente";
             this.Text = "Dar de Baja a Cliente";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DarDeBajaCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClienteSeleccionado)).EndInit();
             this.groupBox1.ResumeLayout(false);

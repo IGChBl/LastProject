@@ -220,7 +220,6 @@
             this.MaximizeBox = false;
             this.Name = "frmActualizarEliminarFacturaErronea";
             this.Text = "Actualizar Factura Errónea";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ActualizarEliminarFacturaErronea_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).EndInit();
             this.groupBox1.ResumeLayout(false);

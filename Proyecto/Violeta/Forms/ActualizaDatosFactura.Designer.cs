@@ -149,7 +149,6 @@
             this.MinimizeBox = false;
             this.Name = "frmActualizaDatosFactura";
             this.Text = "Actualizar Factura";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmActualizaDatosFactura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFecha)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -212,7 +212,6 @@
             this.Name = "frmConsultarCliente";
             this.RightToLeftLayout = true;
             this.Text = "Consultar Cliente";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmConsultarCliente_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.groupBox1.ResumeLayout(false);
