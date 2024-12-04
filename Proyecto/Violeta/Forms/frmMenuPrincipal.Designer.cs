@@ -154,6 +154,7 @@
             this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
             this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
             this.configuraciónToolStripMenuItem.Text = "Notificaciones";
+            this.configuraciónToolStripMenuItem.Click += new System.EventHandler(this.configuraciónToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 

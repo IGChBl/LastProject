@@ -133,6 +133,7 @@ namespace Proyecto
                 Numero = "F" + DateTime.Now.Ticks,
                 Cliente = clienteSeleccionado.Nombre + " " + clienteSeleccionado.Apellido,
                 Fecha = DateTime.Now,
+                FechaCorte = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month)),
                 Servicios = serviciosSeleccionados,
                 Total = totalFactura
             };

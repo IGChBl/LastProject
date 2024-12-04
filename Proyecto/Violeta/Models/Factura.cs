@@ -12,6 +12,7 @@ namespace Proyecto.Models
         public string Numero { get; set; }
         public string Cliente { get; set; }
         public DateTime Fecha { get; set; }
+        public DateTime FechaCorte { get; set; }
         public List<Servicio> Servicios { get; set; }
         public decimal Total { get; set; }
     }

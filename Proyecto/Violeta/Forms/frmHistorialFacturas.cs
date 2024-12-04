@@ -70,6 +70,13 @@ namespace Proyecto
                 // Cargar las facturas existentes
                 dgvFacturas.DataSource = null;
                 dgvFacturas.DataSource = FacturaStorage.CargarFacturas();
+
+                DataGridViewTextBoxColumn fechaCorteColumna = new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "FechaCorte",
+                    HeaderText = "Fecha de Corte"
+                };
+                dgvFacturas.Columns.Add(fechaCorteColumna);
             }
         }
         private void CargarFacturas()
