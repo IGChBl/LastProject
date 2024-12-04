@@ -136,7 +136,7 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.IndianRed;
-            this.btnSalir.Location = new System.Drawing.Point(33, 579);
+            this.btnSalir.Location = new System.Drawing.Point(612, 520);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 32);
             this.btnSalir.TabIndex = 7;
@@ -147,17 +147,17 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(623, 104);
+            this.panel1.Location = new System.Drawing.Point(702, 32);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(353, 454);
+            this.panel1.Size = new System.Drawing.Size(468, 548);
             this.panel1.TabIndex = 8;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(350, 448);
+            this.pictureBox1.Size = new System.Drawing.Size(465, 542);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -170,7 +170,7 @@
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1120, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1170, 27);
             this.toolStrip1.TabIndex = 9;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -200,7 +200,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1120, 755);
+            this.ClientSize = new System.Drawing.Size(1170, 587);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSalir);

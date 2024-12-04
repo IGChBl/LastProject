@@ -123,12 +123,6 @@
     <Compile Include="Forms\frmDarBajaCliente.Designer.cs">
       <DependentUpon>frmDarBajaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmDetallesFactura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmDetallesFactura.Designer.cs">
-      <DependentUpon>frmDetallesFactura.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,9 +187,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDarBajaCliente.resx">
       <DependentUpon>frmDarBajaCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmDetallesFactura.resx">
-      <DependentUpon>frmDetallesFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmHistorialFacturas.resx">
       <DependentUpon>frmHistorialFacturas.cs</DependentUpon>

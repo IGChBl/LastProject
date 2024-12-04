@@ -57,7 +57,7 @@
             this.dgvFacturas.Name = "dgvFacturas";
             this.dgvFacturas.RowHeadersWidth = 51;
             this.dgvFacturas.RowTemplate.Height = 24;
-            this.dgvFacturas.Size = new System.Drawing.Size(968, 256);
+            this.dgvFacturas.Size = new System.Drawing.Size(1120, 256);
             this.dgvFacturas.TabIndex = 0;
             // 
             // btnVerDetalles
@@ -92,7 +92,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(980, 292);
+            this.groupBox1.Size = new System.Drawing.Size(1132, 292);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Historial de Facturas";
@@ -130,7 +130,7 @@
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1020, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1170, 27);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -169,7 +169,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1020, 524);
+            this.ClientSize = new System.Drawing.Size(1170, 587);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnS);
             this.Controls.Add(this.groupBox1);

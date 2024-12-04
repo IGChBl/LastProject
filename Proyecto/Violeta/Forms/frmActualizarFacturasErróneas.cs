@@ -33,11 +33,13 @@ namespace Proyecto
 
         private void ActualizarEliminarFacturaErronea_Load(object sender, EventArgs e)
         {
-            dgvFacturas.ColumnCount = 4;
+            dgvFacturas.ColumnCount = 5;
             dgvFacturas.Columns[0].Name = "Numero";
             dgvFacturas.Columns[1].Name = "Cliente";
             dgvFacturas.Columns[2].Name = "Fecha";
             dgvFacturas.Columns[3].Name = "Total";
+            dgvFacturas.Columns[4].Name = "Fecha de Corte";
+            dgvFacturas.Columns[4].HeaderText = "Fecha de Corte";
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -72,7 +74,7 @@ namespace Proyecto
             {
                 foreach (var factura in facturasFiltradas)
                 {
-                    dgvFacturas.Rows.Add(factura.Numero, factura.Cliente, factura.Fecha.ToShortDateString(), factura.Total.ToString("C"));
+                    dgvFacturas.Rows.Add(factura.Numero, factura.Cliente, factura.Fecha.ToShortDateString(), factura.Total.ToString("C"), factura.FechaCorte.ToShortDateString());
                 }
             }
             else
@@ -90,6 +92,8 @@ namespace Proyecto
                 string numeroFactura = dgvFacturas.SelectedRows[0].Cells["Numero"].Value.ToString();
                 DateTime fecha = DateTime.Parse(dgvFacturas.SelectedRows[0].Cells["Fecha"].Value.ToString());
                 string total = dgvFacturas.SelectedRows[0].Cells["Total"].Value.ToString();
+                DateTime fechaCorte = DateTime.Parse(dgvFacturas.SelectedRows[0].Cells["Fecha de Corte"].Value.ToString());
+
 
                 // Crear una lista con los datos seleccionados para pasar al segundo DataGridView
                 List<string[]> datosFactura = new List<string[]>
@@ -197,6 +201,11 @@ namespace Proyecto
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             this.Close();   
+        }
+
+        private void dgvFacturas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

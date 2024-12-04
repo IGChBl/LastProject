@@ -60,7 +60,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(432, 34);
+            this.label1.Location = new System.Drawing.Point(629, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(244, 24);
             this.label1.TabIndex = 0;
@@ -68,35 +68,35 @@
             // 
             // tbNombre
             // 
-            this.tbNombre.Location = new System.Drawing.Point(183, 56);
+            this.tbNombre.Location = new System.Drawing.Point(183, 82);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(244, 31);
             this.tbNombre.TabIndex = 1;
             // 
             // tbApellido
             // 
-            this.tbApellido.Location = new System.Drawing.Point(183, 144);
+            this.tbApellido.Location = new System.Drawing.Point(183, 167);
             this.tbApellido.Name = "tbApellido";
             this.tbApellido.Size = new System.Drawing.Size(244, 31);
             this.tbApellido.TabIndex = 2;
             // 
             // tbTelefono
             // 
-            this.tbTelefono.Location = new System.Drawing.Point(183, 229);
+            this.tbTelefono.Location = new System.Drawing.Point(183, 249);
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(244, 31);
             this.tbTelefono.TabIndex = 3;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(183, 318);
+            this.tbEmail.Location = new System.Drawing.Point(183, 328);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(244, 31);
             this.tbEmail.TabIndex = 4;
             // 
             // tbDireccion
             // 
-            this.tbDireccion.Location = new System.Drawing.Point(183, 395);
+            this.tbDireccion.Location = new System.Drawing.Point(183, 405);
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.Size = new System.Drawing.Size(244, 31);
             this.tbDireccion.TabIndex = 5;
@@ -116,7 +116,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(17, 57);
+            this.lblNombre.Location = new System.Drawing.Point(17, 82);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(76, 21);
             this.lblNombre.TabIndex = 7;
@@ -125,7 +125,7 @@
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(12, 147);
+            this.lblApellido.Location = new System.Drawing.Point(12, 167);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(81, 21);
             this.lblApellido.TabIndex = 8;
@@ -134,7 +134,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(10, 229);
+            this.lblTelefono.Location = new System.Drawing.Point(12, 252);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(83, 21);
             this.lblTelefono.TabIndex = 9;
@@ -143,7 +143,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(14, 321);
+            this.lblEmail.Location = new System.Drawing.Point(17, 328);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(68, 21);
             this.lblEmail.TabIndex = 10;
@@ -152,7 +152,7 @@
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(14, 395);
+            this.lblDireccion.Location = new System.Drawing.Point(12, 405);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(81, 21);
             this.lblDireccion.TabIndex = 11;
@@ -171,7 +171,7 @@
             this.groupBox1.Controls.Add(this.lblEmail);
             this.groupBox1.Controls.Add(this.lblTelefono);
             this.groupBox1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(567, 61);
+            this.groupBox1.Location = new System.Drawing.Point(477, 72);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(474, 503);
             this.groupBox1.TabIndex = 12;
@@ -181,17 +181,17 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(34, 70);
+            this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(461, 494);
+            this.panel1.Size = new System.Drawing.Size(461, 554);
             this.panel1.TabIndex = 13;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(458, 491);
+            this.pictureBox1.Size = new System.Drawing.Size(458, 548);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -268,7 +268,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1170, 585);
+            this.ClientSize = new System.Drawing.Size(1170, 587);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.button1);

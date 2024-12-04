@@ -33,11 +33,12 @@ namespace Proyecto.Forms
             if (DatosFactura != null && DatosFactura.Count > 0)
             {
                 // Configurar columnas del DataGridView
-                dgvFecha.ColumnCount = 4;
+                dgvFecha.ColumnCount = 5;
                 dgvFecha.Columns[0].Name = "Numero";
                 dgvFecha.Columns[1].Name = "Cliente";
                 dgvFecha.Columns[2].Name = "Fecha";
                 dgvFecha.Columns[3].Name = "Total";
+                dgvFecha.Columns[4].Name = "Fecha de Corte";
                 dgvFecha.Rows.Clear(); // Limpia cualquier fila existente
                 foreach (var fila in DatosFactura)
                 {
