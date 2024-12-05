@@ -133,7 +133,7 @@ namespace Proyecto
                 Numero = "F" + DateTime.Now.Ticks,
                 Cliente = clienteSeleccionado.Nombre + " " + clienteSeleccionado.Apellido,
                 Fecha = DateTime.Now,
-                FechaCorte = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month)),
+                FechaCorte = DateTime.Now.AddDays(30),
                 Servicios = serviciosSeleccionados,
                 Total = totalFactura
             };
@@ -267,6 +267,11 @@ namespace Proyecto
 
             // Abrir el archivo generado en el Bloc de notas
             System.Diagnostics.Process.Start("notepad.exe", rutaFactura);
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
