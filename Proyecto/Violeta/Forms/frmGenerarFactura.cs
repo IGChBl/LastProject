@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Proyecto.Models;
 using static Proyecto.frmHistorialFacturas;
 using Proyecto.Forms;
+using Microsoft.Reporting.WinForms;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Proyecto
 {
@@ -268,6 +270,57 @@ namespace Proyecto
             // Abrir el archivo generado en el Bloc de notas
             System.Diagnostics.Process.Start("notepad.exe", rutaFactura);
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            // Cargar todas las facturas desde el archivo
+            var facturas = FacturaStorage.CargarFacturas();
+
+            if (facturas == null || facturas.Count == 0)
+            {
+                MessageBox.Show("No hay facturas para mostrar en el reporte.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return; // Salir si no hay facturas
+            }
+
+            // Obtener solo la última factura creada
+            var ultimaFactura = facturas.OrderByDescending(f => f.Fecha).FirstOrDefault();
+
+            if (ultimaFactura == null)
+            {
+                MessageBox.Show("No se encontró la última factura.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Crear una lista para el reporte (solo con la última factura)
+            var datosReporte = ultimaFactura.Servicios.Select(servicio => new FacturaReporte
+            {
+                NumeroFactura = ultimaFactura.Numero,
+                FechaFactura = ultimaFactura.Fecha,
+                NombreCliente = ultimaFactura.Cliente,
+                ServicioNombre = servicio.Nombre,
+                ServicioPrecio = servicio.Precio,
+                TotalFactura = ultimaFactura.Total
+            }).ToList();
+
+            if (!datosReporte.Any())
+            {
+                MessageBox.Show("No hay datos para generar el reporte.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Crear la fuente de datos para el reporte
+            ReportDataSource dataSource = new ReportDataSource("DsDatos", datosReporte);
+
+            // Abrir el formulario de reportes
+            frmReportes frmReportes = new frmReportes();
+            frmReportes.reportViewer1.LocalReport.DataSources.Clear();
+            frmReportes.reportViewer1.LocalReport.DataSources.Add(dataSource);
+            frmReportes.reportViewer1.LocalReport.ReportEmbeddedResource = "Proyecto.Reportes.Rpt.rdlc";
+            frmReportes.reportViewer1.RefreshReport();
+
+            frmReportes.ShowDialog();
+        }
     }
 }
+
 
