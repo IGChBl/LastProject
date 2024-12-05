@@ -80,5 +80,6 @@ namespace Proyecto.Forms
                 Ingresar();
             }
         }
+
     }
 }
